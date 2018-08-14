@@ -12,3 +12,27 @@
 6. You can set which storage to use per environment in the environments files. See `config/environments/development.rb` and look at the `config.active_storage.service` setting. By default it references the `local` storage.
 7. Active storage has built in storage adapters for common storage options like S3. See `config/storage.yml` for commented examples.
 
+### Reference
+Check out the Rails ActiveStorage docs here https://edgeguides.rubyonrails.org/active_storage_overview.html
+
+## Challenge
+Your challenge is to add the code necessary to have the features described below.
+
+### Attaching a file
+1. A user should be able to attach one photo of a dog.
+
+### Attach multiple files
+1. A user should be able to attach multiple photos of a cat.
+
+### Removing a file
+1. A user shoul dbe able to delete any photo they have attached to a dog or a cat.
+
+### Link to file
+1. A user should be able to get a link to any of their photos that will go directly to the photo.
+
+### Download file
+1. A user should be able to download photos of their cats and dogs.
+
+## Bonous Points
+### Resize file with Image magic
+1. Storing the originial photos takes up too much space! When a user uploads a photo of a cat or dog the application should create thumbnail (100px x 100px, 72dpi) and a large (400px x 400px, 72dpi) image. The originaly should not be saved.
