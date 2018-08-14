@@ -1,9 +1,9 @@
-##Getting Started
+## Getting Started
 1. Clone repo: `git clone git@github.com:josephbhunt/active-storage-demo.git`
 2. `docker-compose build`
 3. `docker-compose up`
 
-##Adding ActiveStorage
+## Adding ActiveStorage
 1. Install ActiveStorage: `rails active_storage:install`
 2. You now have a migration in `db/migrate`.
 3. Run the migration: `rails db:migrate`
