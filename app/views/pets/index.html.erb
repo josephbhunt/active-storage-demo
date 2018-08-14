@@ -1,0 +1,26 @@
+<h1>Pets!</h1>
+
+<%= link_to "New", new_pet_path %>
+
+</br></br>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Breed</th>
+      <th>Image</th>
+      <th>Image Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%- @pets.each do |pet| %>
+      <tr>
+        <td><%= pet.name %></td>
+        <td><%= pet.breed %></td>
+        <td></td>
+        <td></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

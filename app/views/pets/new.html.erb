@@ -1,0 +1,15 @@
+<h1>New Pet</h1>
+
+<%= link_to "Back", pets_path %>
+
+</br></br>
+
+<%= form_for :pet, url: pets_path do |f| %>
+  <label>Name</label>
+  <%= f.text_field :name %>
+  </br>
+  <label>Breed</label>
+  <%= f.text_field :breed %>
+  </br>
+  <%= f.submit %>
+<% end %>
