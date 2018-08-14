@@ -36,3 +36,4 @@ Your challenge is to add the code necessary to have the features described below
 ## Bonous Points
 ### Resize file with Image magic
 1. Storing the originial photos takes up too much space! When a user uploads a photo of a cat or dog the application should create thumbnail (100px x 100px, 72dpi) and a large (400px x 400px, 72dpi) image. The originaly should not be saved.
+2. Find help here https://edgeguides.rubyonrails.org/active_storage_overview.html#transforming-images
