@@ -19,10 +19,10 @@ Check out the Rails ActiveStorage docs here https://edgeguides.rubyonrails.org/a
 Your challenge is to add the code necessary to have the features described below.
 
 ### Attaching a file
-1. A user should be able to attach one photo of a dog.
+1. A user should be able to attach one photo of a pet.
 
 ### Attach multiple files
-1. A user should be able to attach multiple photos of a cat.
+1. A user should be able to attach multiple photos of a pet.
 
 ### Removing a file
 1. A user shoul dbe able to delete any photo they have attached to a dog or a cat.
