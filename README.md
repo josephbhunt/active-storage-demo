@@ -23,15 +23,20 @@ Your challenge is to add the code necessary to have the features described below
 
 ### Attach multiple files
 1. A user should be able to attach multiple photos of a pet.
+HINT: Use the following example form option to upload multiple files.
+`<%= form.file_field :photos, multiple: true %>`
+You will also have to modify the index page to show your photos. Try just looping through them and displaying them as an unordered list in a <td></td>.
 
 ### Removing a file
-1. A user shoul dbe able to delete any photo they have attached to a dog or a cat.
+1. A user should be able to delete any photo they have attached to a dog or a cat.
+2. Add a delete column to the table on the index page.
 
 ### Link to file
 1. A user should be able to get a link to any of their photos that will go directly to the photo.
 
 ### Download file
 1. A user should be able to download photos of their cats and dogs.
+HINT: Take a look at rails_blob_path in the docs. This can be done with one line of code, no need to set up a controller action and new route.
 
 ## Bonous Points
 ### Resize file with Image magic
