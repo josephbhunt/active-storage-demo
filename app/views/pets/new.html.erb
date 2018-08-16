@@ -11,5 +11,8 @@
   <label>Breed</label>
   <%= f.text_field :breed %>
   </br>
+  <label>Photo</label>
+  <%= f.file_field :photos, multiple: true %>
+  </br>
   <%= f.submit %>
 <% end %>

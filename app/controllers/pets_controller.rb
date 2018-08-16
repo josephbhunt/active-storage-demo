@@ -14,9 +14,15 @@ class PetsController < ApplicationController
     redirect_to pets_path
   end
 
+  def delete_photos
+    @pet = Pet.find(params[:pet_id])
+    @pet.photos.purge
+    redirect_to pets_path
+  end
+
   private
 
   def pet_params
-    params.require(:pet).permit(:name, :breed)
+    params.require(:pet).permit(:name, :breed, photos: [])
   end
 end

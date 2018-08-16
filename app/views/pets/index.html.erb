@@ -10,7 +10,9 @@
       <th>Name</th>
       <th>Breed</th>
       <th>Image</th>
-      <th>Image Link</th>
+      <th>View Photos</th>
+      <th>Download File</th>
+      <th>Delete Photos</th>
     </tr>
   </thead>
   <tbody>
@@ -18,8 +20,30 @@
       <tr>
         <td><%= pet.name %></td>
         <td><%= pet.breed %></td>
-        <td></td>
-        <td></td>
+        <td>
+          <ul>
+            <%- pet.photos.each do |photo| %>
+              <li><%= image_tag photo %></li>
+            <% end %>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <%- pet.photos.each do |photo| %>
+              <li><%= link_to "Photo", url_for(photo) %></li>
+            <% end %>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <%- pet.photos.each do |photo| %>
+              <li><%= link_to 'Download', rails_blob_path(photo, disposition: "attachment") %></li>
+            <% end %>
+          </ul>
+        </td>
+        <td>
+          <%= button_to "Delete", {action: :delete_photos, pet_id: pet.id}, method: :delete %>
+        </td>
       </tr>
     <% end %>
   </tbody>
