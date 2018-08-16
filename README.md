@@ -22,23 +22,23 @@ Your challenge is to add the code necessary to have the features described below
 1. A user should be able to attach one photo of a pet.
 
 ### Attach multiple files
-1. A user should be able to attach multiple photos of a pet.
+1. A user should be able to attach multiple photos of a pet.  
 HINT: Use the following example form option to upload multiple files.
-`<%= form.file_field :photos, multiple: true %>`
+`<%= form.file_field :photos, multiple: true %>`  
 You will also have to modify the index page to show your photos. Try just looping through them and displaying them as an unordered list in a <td></td>.
 
 ### Removing a file
-1. A user should be able to delete any photo they have attached to a dog or a cat.
+1. A user should be able to delete any photo they have attached to a dog or a cat.  
 2. Add a delete column to the table on the index page.
 
 ### Link to file
 1. A user should be able to get a link to any of their photos that will go directly to the photo.
 
 ### Download file
-1. A user should be able to download photos of their cats and dogs.
-HINT: Take a look at rails_blob_path in the docs. This can be done with one line of code, no need to set up a controller action and new route.
+1. A user should be able to download photos of their cats and dogs.  
+HINT: Take a look at rails_blob_path in the docs. This can be done with one line of code. There is no need to set up a controller action and new route.
 
 ## Bonous Points
 ### Resize file with Image magic
-1. Storing the originial photos takes up too much space! When a user uploads a photo of a cat or dog the application should create thumbnail (100px x 100px, 72dpi) and a large (400px x 400px, 72dpi) image. The originaly should not be saved.
+1. Storing the originial photos takes up too much space! When a user uploads a photo of a cat or dog the application should create thumbnail (100px x 100px, 72dpi) and a large (400px x 400px, 72dpi) image. The originaly should not be saved.  
 2. Find help here https://edgeguides.rubyonrails.org/active_storage_overview.html#transforming-images
