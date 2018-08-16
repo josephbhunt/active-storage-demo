@@ -28,14 +28,17 @@ HINT: Use the following example form option to upload multiple files.
 You will also have to modify the index page to show your photos. Try just looping through them and displaying them as an unordered list in a <td></td>.
 
 ### Removing a file
-1. A user should be able to delete any photo they have attached to a dog or a cat.  
-2. Add a delete column to the table on the index page.
+1. A user should be able to delete any photo they have attached to a pet.  
+2. Put the delete button in the "Delete Photos" column. It should just delete all the photos for that pet.
+HINT: Look at rails's `button_to` helper method.
 
 ### Link to file
 1. A user should be able to get a link to any of their photos that will go directly to the photo.
+2. Put the link to the file under the "View Photos" column.
 
 ### Download file
-1. A user should be able to download photos of their cats and dogs.  
+1. A user should be able to download photos of their pets.  
+2. Put the link under the "Download File" column.
 HINT: Take a look at rails_blob_path in the docs. This can be done with one line of code. There is no need to set up a controller action and new route.
 
 ## Bonous Points
