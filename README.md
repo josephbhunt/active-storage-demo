@@ -4,13 +4,14 @@
 3. `docker-compose up`
 
 ## Adding ActiveStorage
-1. Install ActiveStorage: `rails active_storage:install`
+1. Install ActiveStorage in the docker container: `docker exec active-storage-demo_web_1 rails active_storage:install`
 2. You now have a migration in `db/migrate`.
-3. Run the migration: `rails db:migrate`
-4. This adds two tables to your db, which ActiveStorage will use. `active_storage_blobs` and `active_storage_attachments`
-5. You should also have a `config/storage.yml` file. That's where you configure your storage options.
-6. You can set which storage to use per environment in the environments files. See `config/environments/development.rb` and look at the `config.active_storage.service` setting. By default it references the `local` storage.
-7. Active storage has built in storage adapters for common storage options like S3. See `config/storage.yml` for commented examples.
+3. Create the database in the docker container: `docker exec active-storage-demo_web_1 rails db:create`
+4. Run the migration in the docker container: `docker exec active-storage-demo_web_1 rails db:migrate`
+5. This adds two tables to your db, which ActiveStorage will use. `active_storage_blobs` and `active_storage_attachments`
+6. You should also have a `config/storage.yml` file. That's where you configure your storage options.
+7. You can set which storage to use per environment in the environments files. See `config/environments/development.rb` and look at the `config.active_storage.service` setting. By default it references the `local` storage.
+8. Active storage has built in storage adapters for common storage options like S3. See `config/storage.yml` for commented examples.
 
 ### Reference
 Check out the Rails ActiveStorage docs here https://edgeguides.rubyonrails.org/active_storage_overview.html
